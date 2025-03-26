@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Development Server",
+            "type": "node-terminal",
+            "request": "launch",
+            "command": "npm start",
+            "cwd": "${workspaceFolder}",
+            "skipFiles": ["<node_internals>/**"],
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "name": "Debug in Browser",
+            "type": "msedge",
+            "request": "launch",
+            "url": "http://localhost:3006",
+            "webRoot": "${workspaceFolder}/src",
+            "sourceMapPathOverrides": {
+                "webpack:///src/*": "${webRoot}/*"
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Full Stack Debug",
+            "configurations": ["Launch Development Server", "Debug in Browser"]
+        }
+    ]
+} 

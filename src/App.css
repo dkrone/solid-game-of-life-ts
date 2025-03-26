@@ -1,0 +1,35 @@
+html {
+	background: #e2e5ff;
+	height: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+body {
+	font-family: "Roboto Mono", monospace;
+	height: 100%;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	touch-action: pan-y;
+}
+
+.title,
+.subtitle {
+	margin: 0 auto;
+	max-width: 700px;
+}
+
+.button {
+	color: #fff !important;
+	border: none;
+	background: #62a87c;
+}
+
+.button:hover {
+	color: #fff;
+	border: none;
+}
+
+.button:focus {
+	outline: none;
+}
